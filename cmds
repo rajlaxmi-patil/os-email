@@ -1,0 +1,22 @@
+
+Using Convolution Neural Network to classifying flowers
+
+Training the model:
+
+python retrain.py --image_dir flower_photos/
+
+os cmd:
+python email_os_command_executer.py "python retrain.py --image_dir flower_photos/"
+python retrain.py --help
+python email_os_command_executer.py "python retrain.py --learning_rate 0.005 --image_dir flower_photos/"
+
+
+
+Testing the model:
+
+
+python email_os_command_executer.py "python label_image.py --graph=output_graph.pb --labels=output_labels.txt --image=flower_photos/sunflowers/164670176_9f5b9c7965.jpg --input_layer=Placeholder --output_layer=final_result"
+
+curl <url> > test.jpg
+
+python email_os_command_executer.py "python label_image.py --graph=output_graph.pb --labels=output_labels.txt --image=test.jpg --input_layer=Placeholder --output_layer=final_result"
